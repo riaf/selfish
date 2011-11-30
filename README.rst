@@ -37,8 +37,8 @@
 
 * とりあえず、作りかけてたものを入れようと思っているものたち
 
-  - File\Epub
-  - Http\Request
-  - Service\Facebook
+  - File\\Epub
+  - Http\\Request
+  - Service\\Facebook
   - Session
 

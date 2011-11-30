@@ -8,7 +8,7 @@
  * @license     The BSD License
  */
 
-namespace Selfish;
+namespace Selfish\Cache;
 
 /**
  * Cache
@@ -21,7 +21,7 @@ class Cache
 
     static protected $storage;
 
-    static public function registerStorage(Cache\Storage $storage)
+    static public function registerStorage(Storage $storage)
     {
         static::$storage = $storage;
     }
@@ -31,7 +31,7 @@ class Cache
         $this->namespace = $namespace;
 
         if (is_null(static::$storage)) {
-            self::registerStorage(new Cache\Apc);
+            self::registerStorage(new Apc);
         }
     }
 

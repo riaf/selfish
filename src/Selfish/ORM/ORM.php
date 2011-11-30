@@ -8,7 +8,7 @@
  * @license     The BSD License
  */
 
-namespace Selfish;
+namespace Selfish\ORM;
 
 /**
  * ORM
@@ -80,7 +80,7 @@ class ORM
             throw new \RuntimeException('$object is not Object');
         }
 
-        if ($object instanceof ORM\Entity) {
+        if ($object instanceof Entity) {
             $columns = $object->getColumns();
             $table = $object->getTable();
         } else {

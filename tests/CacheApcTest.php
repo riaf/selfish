@@ -1,6 +1,6 @@
 <?php
 
-use Selfish\Cache;
+use Selfish\Cache\Cache;
 
 class CacheApcTest extends PHPUnit_Framework_TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-use Selfish\ORM;
+use Selfish\ORM\ORM;
 use Selfish\ORM\Entity;
 
 class ORMTest extends PHPUnit_Framework_TestCase
