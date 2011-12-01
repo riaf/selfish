@@ -59,7 +59,9 @@ class Event implements ComponentInterface
     public function getStartAt()
     {
         return ($this->start_at instanceof \DateTime)
-            ? str_replace(' ', 'T', $this->start_at->format('Ymd His')) : $this->start_at;
+            ? str_replace(' ', 'T', $this->start_at->setTimezone(
+                new DateTimeZone('Asia/Tokyo'))->format('Ymd His')
+            ) : $this->start_at;
     }
 
     public function setStartAt($start_at)
@@ -71,7 +73,9 @@ class Event implements ComponentInterface
     public function getEndAt()
     {
         return ($this->end_at instanceof \DateTime)
-            ? str_replace(' ', 'T', $this->end_at->format('Ymd His')) : $this->end_at;
+            ? str_replace(' ', 'T', $this->end_at->setTimezone(
+                new DateTimeZone('Asia/Tokyo'))->format('Ymd His')
+            ) : $this->end_at;
     }
 
     public function setEndAt($end_at)
@@ -133,7 +137,9 @@ class Event implements ComponentInterface
     public function getCreatedAt()
     {
         return ($this->created_at instanceof \DateTime)
-            ? str_replace(' ', 'T', $this->created_at->format('Ymd His')) : $this->created_at;
+            ? str_replace(' ', 'T', $this->created_at->setTimezone(
+                new DateTimeZone('Asia/Tokyo'))->format('Ymd His')
+            ) : $this->created_at;
     }
 
     public function setCreatedAt($created_at)
