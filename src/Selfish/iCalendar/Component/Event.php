@@ -60,7 +60,7 @@ class Event implements ComponentInterface
     {
         return ($this->start_at instanceof \DateTime)
             ? str_replace(' ', 'T', $this->start_at->setTimezone(
-                new DateTimeZone('Asia/Tokyo'))->format('Ymd His')
+                new \DateTimeZone('Asia/Tokyo'))->format('Ymd His')
             ) : $this->start_at;
     }
 
@@ -74,7 +74,7 @@ class Event implements ComponentInterface
     {
         return ($this->end_at instanceof \DateTime)
             ? str_replace(' ', 'T', $this->end_at->setTimezone(
-                new DateTimeZone('Asia/Tokyo'))->format('Ymd His')
+                new \DateTimeZone('Asia/Tokyo'))->format('Ymd His')
             ) : $this->end_at;
     }
 
@@ -138,7 +138,7 @@ class Event implements ComponentInterface
     {
         return ($this->created_at instanceof \DateTime)
             ? str_replace(' ', 'T', $this->created_at->setTimezone(
-                new DateTimeZone('Asia/Tokyo'))->format('Ymd His')
+                new \DateTimeZone('Asia/Tokyo'))->format('Ymd His')
             ) : $this->created_at;
     }
 
